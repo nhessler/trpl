@@ -1,26 +1,22 @@
+use std::io;
+
 fn main() {
-    let implicit_a = [1, 2, 3, 4, 5];
-    let explicit_a: [i32; 5] = [1, 2, 3, 4, 5];
+    let a = [1, 2, 3, 4, 5];
 
-    let months = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December",
-    ];
+    println!("Please enter an array index.");
 
-    let a = [3; 5]; // sets a to [3, 3, 3, 3, 3]
+    let mut index = String::new();
 
-    let b = [1, 2, 3, 4, 5];
+    io::stdin()
+        .read_line(&mut index)
+        .expect("Failed to read line");
 
-    let first = b[0];
-    let second = b[1];
+    let index: usize = index
+        .trim()
+        .parse()
+        .expect("Index entered was not a number");
+
+    let element = a[index];
+
+    println!("The value of the element at index {index} is: {element}");
 }

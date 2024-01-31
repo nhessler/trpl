@@ -1,5 +1,9 @@
 fn main() {
-    let c = 'z';
-    let z: char = 'ℤ'; // with explicit type annotation
-    let heart_eyed_cat = '😻';
+    let etup: (i32, f64, u8) = (500, 6.4, 1);
+
+    let itup = (500, 6.4, 1);
+
+    let (x, y, z) = itup;
+
+    println!("The value of y is: {y}");
 }

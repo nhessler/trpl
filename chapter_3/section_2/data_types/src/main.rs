@@ -18,4 +18,9 @@ fn main() {
     ];
 
     let a = [3; 5]; // sets a to [3, 3, 3, 3, 3]
+
+    let b = [1, 2, 3, 4, 5];
+
+    let first = b[0];
+    let second = b[1];
 }
